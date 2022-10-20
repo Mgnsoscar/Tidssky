@@ -102,7 +102,7 @@ class GUI(object):
 
         font = QtGui.QFont()
         font.setFamily("Roboto Cn")
-        font.setPointSize(15)
+
         font.setBold(True)
         font.setItalic(False)
         font.setWeight(75)
@@ -110,7 +110,7 @@ class GUI(object):
         self.title.setFont(font)
         self.title.setStyleSheet(       "border-bottom-right-radius:15px;"      "border-bottom-left-radius:5px;"        "color: rgb(255, 255, 255);"            
                                         "background-color:rgba(0, 0, 0, 120);"  "border-bottom-right-radius:15px;"      "border-top-right-radius:15px;"
-                                        "border-bottom-left-radius:0px;")
+                                        "border-bottom-left-radius:0px; font-size:20px;")
 
         #### Creating yet another layout in the frame so that the title is displayed in the middle verticaly
 
@@ -327,9 +327,8 @@ class GUI(object):
 
         font = QtGui.QFont()
         font.setFamily("Roboto")
-        font.setPointSize(7)
         self.credits.setFont(font)
-        self.credits.setStyleSheet("border-image:none;  background:none;")
+        self.credits.setStyleSheet("border-image:none;  background:none; font-size:10px;" "color:rgb(0,0,0,120);")
 
         ### Set grid of the text label for the text to be aligned properly
 

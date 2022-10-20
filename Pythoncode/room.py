@@ -67,7 +67,7 @@ class Room(QtWidgets.QFrame):
         font.setWeight(75)
         font.setKerning(True)
         self.label_2.setFont(font)
-        self.label_2.setStyleSheet("background:none;""color: rgb(255, 255, 255);")
+        self.label_2.setStyleSheet("background:none;""color: rgb(255, 255, 255);font-size:15px;")
 
         # Add label widget to the layout
         self.verticalLayout_6.addWidget(self.label_2, 0, QtCore.Qt.AlignHCenter)
@@ -111,7 +111,7 @@ class Room(QtWidgets.QFrame):
         font.setFamily("Roboto Cn")
         font.setPointSize(10)
         self.pasientlabel.setFont(font)
-        self.pasientlabel.setStyleSheet("background:none;""color: rgb(217, 217, 217);")
+        self.pasientlabel.setStyleSheet("background:none;""color: rgb(217, 217, 217);font-size:15px;")
         self.verticalLayout_7.addWidget(self.pasientlabel, 0, QtCore.Qt.AlignHCenter)
         self.gridLayout.addWidget(self.pasientframe, 0, 0, 1, 1)
 
@@ -130,7 +130,7 @@ class Room(QtWidgets.QFrame):
         font.setFamily("Roboto Cn")
         font.setPointSize(10)
         self.pasientsvarlabel.setFont(font)
-        self.pasientsvarlabel.setStyleSheet("background:none;""color: rgb(255, 255, 255);")
+        self.pasientsvarlabel.setStyleSheet("background:none;""color: rgb(255, 255, 255);font-size:15px;")
         self.pasientsvarlabel.setAlignment(QtCore.Qt.AlignCenter)
         self.verticalLayout_8.addWidget(self.pasientsvarlabel)
         self.gridLayout.addWidget(self.pasientsvarframe, 0, 1, 1, 1)
@@ -156,7 +156,7 @@ class Room(QtWidgets.QFrame):
         font.setFamily("Roboto Cn")
         font.setPointSize(10)
         self.statuslabel.setFont(font)
-        self.statuslabel.setStyleSheet("background:none;""color: rgb(217, 217, 217);")
+        self.statuslabel.setStyleSheet("background:none;""color: rgb(217, 217, 217);font-size:15px;")
         self.verticalLayout_9.addWidget(self.statuslabel, 0, QtCore.Qt.AlignHCenter)
         self.gridLayout.addWidget(self.statusframe, 1, 0, 1, 1)
 
@@ -178,7 +178,7 @@ class Room(QtWidgets.QFrame):
         font.setFamily("Roboto Cn")
         font.setPointSize(10)
         self.statussvarlabel.setFont(font)
-        self.statussvarlabel.setStyleSheet("background:none;""color: rgb(255, 255, 255);")
+        self.statussvarlabel.setStyleSheet("background:none;""color: rgb(255, 255, 255);font-size:15px;")
         self.statussvarlabel.setAlignment(QtCore.Qt.AlignCenter)
 
         # Set grid layout
@@ -204,9 +204,8 @@ class Room(QtWidgets.QFrame):
         self.nestebehlabel = QtWidgets.QLabel(self.nestebeh)
         font = QtGui.QFont()
         font.setFamily("Roboto Cn")
-        font.setPointSize(10)
         self.nestebehlabel.setFont(font)
-        self.nestebehlabel.setStyleSheet("background:none;""color: rgb(217, 217, 217);")
+        self.nestebehlabel.setStyleSheet("background:none;""color: rgb(217, 217, 217);font-size:15px;")
 
         # Set grid layout
 
@@ -232,11 +231,11 @@ class Room(QtWidgets.QFrame):
         font.setFamily("Roboto Cn")
         font.setPointSize(10)
         self.nestebehsvarlabel.setFont(font)
-        self.nestebehsvarlabel.setStyleSheet("background:none;""color: rgb(255, 255, 255);")
+        self.nestebehsvarlabel.setStyleSheet("background:none;""color: rgb(255, 255, 255); font-size:15px;")
 
         # Set grid layout
 
-        self.verticalLayout_12.addWidget(self.nestebehsvarlabel)
+        self.verticalLayout_12.addWidget(self.nestebehsvarlabel, 0, QtCore.Qt.AlignHCenter)
         self.gridLayout.addWidget(self.nestebehsvarframe, 2, 1, 1, 1)
         self.verticalLayout_4.addWidget(self.pasientstatus)
 
@@ -277,10 +276,9 @@ class Room(QtWidgets.QFrame):
 
         # Set style and font
 
-        self.lcdtime.setStyleSheet("color: rgba(255, 255, 255, 200);border:none;")
+        self.lcdtime.setStyleSheet("color: rgba(255, 255, 255, 200);border:none;font-size:45px;")
         font = QtGui.QFont()
         font.setFamily("Roboto Cn")
-        font.setPointSize(35)
         self.lcdtime.setFont(font)
 
         # Set grid layout
@@ -317,11 +315,10 @@ class Room(QtWidgets.QFrame):
 
         font = QtGui.QFont()
         font.setFamily("Roboto")
-        font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
         self.start.setFont(font)
-        self.start.setStyleSheet("QPushButton{\n""border:1px solid;\n""border-color: rgb(39, 39, 39);\n"
+        self.start.setStyleSheet("QPushButton{\n""border:1px solid;\n""border-color: rgb(39, 39, 39);font-size:13px;\n"
                                  "border-radius:0px;\n""border-radius:15px;\n""background-color: rbg(0,0,0,80);\n"
                                  "    color: rgb(217, 217, 217);\n""}\n""QPushButton:hover{\n"
                                  "background-color: rgba(0, 0, 0, 120);\n""}")
@@ -339,12 +336,11 @@ class Room(QtWidgets.QFrame):
 
         font = QtGui.QFont()
         font.setFamily("Roboto")
-        font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
         self.stop.setFont(font)
 
-        self.stop.setStyleSheet("QPushButton{\n""border:1px solid;\n""border-color: rgb(39, 39, 39);\n"
+        self.stop.setStyleSheet("QPushButton{\n""border:1px solid;\n""border-color: rgb(39, 39, 39);font-size:13px;\n"
                                 "border-radius:0px;\n""border-radius:15px;\n""background-color: rbg(0,0,0,80);\n"
                                 "    color: rgb(217, 217, 217);\n""}\n""QPushButton:hover{\n"
                                 "background-color: rgba(0, 0, 0, 120);\n""}")
@@ -362,14 +358,13 @@ class Room(QtWidgets.QFrame):
 
         font = QtGui.QFont()
         font.setFamily("Roboto")
-        font.setPointSize(10)
         font.setBold(True)
         font.setWeight(75)
         self.reset.setFont(font)
         self.reset.setStyleSheet("QPushButton{\n""border:1px solid;\n""border-color: rgb(39, 39, 39);\n"
                                  "border-radius:0px;\n""border-radius:15px;\n""background-color: rbg(0,0,0,80);\n"
-                                 "    color: rgb(217, 217, 217);\n""}\n""QPushButton:hover{\n"
-                                 "background-color: rgba(0, 0, 0, 120);\n""}")
+                                 "    color: rgb(217, 217, 217);font-size:13px;\n""}\n""QPushButton:hover{\n"
+                                 "background-color: rgba(0, 0, 0, 120);\n"" } ")
 
         self.horizontalLayout_11.addWidget(self.reset)
         self.verticalLayout_44.addWidget(self.startstopframe)
@@ -399,13 +394,13 @@ class Room(QtWidgets.QFrame):
 
         font = QtGui.QFont()
         font.setFamily("Roboto")
-        font.setPointSize(14)
         font.setBold(True)
         font.setWeight(75)
         self.minus.setFont(font)
         self.minus.setStyleSheet("QPushButton{\n""border:1px solid;\n""border-color: rgb(39, 39, 39);\n"
-                                 "border-radius:0px;\n""border-radius:15px;\n""background-color: rbg(0,0,0,80);\n"
-                                 "}\n""QPushButton:hover{\n""background-color: rgba(255, 2, 2, 100);\n""}")
+                                "border-radius:0px;\n""border-radius:15px;\n""background-color: rgb(0,0,0,80);\n"
+                                 "}\n""QPushButton:hover{\n""background-color: rgba(255, 2, 2, 100);\n""}"
+                                 "font-size:15px;")
 
         self.horizontalLayout_6.addWidget(self.minus)
 
@@ -420,13 +415,16 @@ class Room(QtWidgets.QFrame):
 
         font = QtGui.QFont()
         font.setFamily("Roboto Cn")
-        font.setPointSize(10)
         self.textenter.setFont(font)
         self.textenter.setStyleSheet("border-radius:5px;\n""background-color: rgba(0, 0, 0, 120); \n"
-                                     "color: rgb(255, 255, 255);")
+                                     "color: rgb(255, 255, 255); font-size:12px")
 
         self.textenter.setAlignment(QtCore.Qt.AlignCenter)
         self.horizontalLayout_6.addWidget(self.textenter)
+
+        # Set the input mask
+
+
 
         ################################################################################################################
         # Create the plus time button
@@ -439,14 +437,14 @@ class Room(QtWidgets.QFrame):
 
         font = QtGui.QFont()
         font.setFamily("Roboto")
-        font.setPointSize(14)
         font.setBold(True)
         font.setWeight(75)
         font.setKerning(False)
         self.plus.setFont(font)
         self.plus.setStyleSheet("QPushButton{\n""border:1px solid;\n""border-color: rgb(39, 39, 39);\n"
                                 "border-radius:0px;\n""border-radius:15px;\n""background-color: rgb(0,0,0,80);\n"
-                                "}\n""QPushButton:hover{\n""background-color: rgba(0, 255, 0, 100);\n""};")
+                                "}\n""QPushButton:hover{\n""background-color: rgba(0, 255, 0, 100);\n""};"
+                                "font-size:12px;")
         self.plus.setAutoRepeatDelay(0)
 
         self.horizontalLayout_6.addWidget(self.plus)
@@ -467,9 +465,9 @@ class Room(QtWidgets.QFrame):
         self.label_2.setText(_translate("MainWindow", "Injeksjonsrom 1"))
         self.pasientlabel.setText(_translate("MainWindow", "Pasient:"))
         self.pasientsvarlabel.setText(_translate("MainWindow", "Magnus Støleggen"))
-        self.statuslabel.setText(_translate("MainWindow", "Status"))
-        self.statussvarlabel.setText(_translate("MainWindow", "Under behandling"))
-        self.nestebehlabel.setText(_translate("MainWindow", "Neste behandling"))
+        self.statuslabel.setText(_translate("MainWindow", "Status:"))
+        self.statussvarlabel.setText(_translate("MainWindow", "Under behandling:"))
+        self.nestebehlabel.setText(_translate("MainWindow", "Neste behandling:"))
         self.nestebehsvarlabel.setText(_translate("MainWindow", "PET-Scan - 14:45"))
         self.start.setText(_translate("MainWindow", "START"))
         self.stop.setText(_translate("MainWindow", "STOP"))
@@ -497,7 +495,7 @@ class Room(QtWidgets.QFrame):
                                 minutes = int(minutes) + (int(hours) * 60)
                                 seconds = int(seconds) + (minutes * 60)
                                 self.timer_counter_num = self.timer_counter_num + seconds
-                        #print('hei')
+
                         timer_counter()
 
                 # elif work == 'stop':
@@ -518,7 +516,7 @@ class Room(QtWidgets.QFrame):
                                 if self.timer_counter_num == 0:
 
                                         self.timer_running = False
-                                        self.timer('reset')
+                                        timer('reset')
                                         display = '00:00:00'
 
                                 else:
@@ -532,7 +530,6 @@ class Room(QtWidgets.QFrame):
                         self.timer.timeout.connect(count)
                         self.timer.setInterval(1000)  # 1000ms = 1s
                         self.timer.start()
-
 
                 count()
 

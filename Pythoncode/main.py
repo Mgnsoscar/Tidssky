@@ -35,6 +35,7 @@ class MainWindow(QtWidgets.QMainWindow):
 #### Run Aplication
 
 if __name__ == "__main__":
+    QtCore.QCoreApplication.setAttribute(QtCore.Qt.AA_DisableHighDpiScaling)
     app = QtWidgets.QApplication(sys.argv)
     MainWindow = MainWindow()
     MainWindow.show()
