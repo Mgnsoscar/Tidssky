@@ -226,16 +226,22 @@ class Room(QtWidgets.QFrame):
         self.timerframe.setObjectName("timerframe")
         self.verticalLayout_49 = QtWidgets.QVBoxLayout(self.timerframe)
         self.verticalLayout_49.setObjectName("verticalLayout_49")
-        self.lcdtime = QtWidgets.QLCDNumber(self.timerframe)
-        self.lcdtime.setStyleSheet("background:none;\n"
-"border:none;\n"
-"color: rgba(255, 255, 255, 200);")
-        self.lcdtime.setFrameShape(QtWidgets.QFrame.NoFrame)
-        self.lcdtime.setDigitCount(6)
-        self.lcdtime.setSegmentStyle(QtWidgets.QLCDNumber.Filled)
-        self.lcdtime.setObjectName("lcdtime")
 
+########################################################################################################################
+# COUNTER LABEL
+########################################################################################################################
+
+
+        self.lcdtime = QtWidgets.QLabel(self.timerframe)
+        self.lcdtime.setStyleSheet("color: rgba(255, 255, 255, 200);border:none;")
         self.verticalLayout_49.addWidget(self.lcdtime)
+        self.lcdtime.setAlignment(QtCore.Qt.AlignHCenter)
+        self.lcdtime.setAlignment(QtCore.Qt.AlignCenter)
+        font = QtGui.QFont()
+        font.setFamily("Roboto Cn")
+        font.setPointSize(35)
+        self.lcdtime.setFont(font)
+
         self.verticalLayout_44.addWidget(self.timerframe, 0, QtCore.Qt.AlignHCenter)
         self.startstopframe = QtWidgets.QFrame(self.timer)
         self.startstopframe.setMinimumSize(QtCore.QSize(0, 30))
@@ -407,35 +413,9 @@ class Room(QtWidgets.QFrame):
         ########### Set start button
 
         self.start.clicked.connect(lambda:timer('start'))
-        self.lcdtime.setDigitCount(12)
+        self.lcdtime.setText(_translate("MainWindow", "0:00:00"))
 
-
-
-        def timer_counter(self,):
-                def count():
-
-                        if self.timer_running:
-
-                                if self.timer_counter_num == 0:
-
-                                        self.timer_running = False
-                                        self.timer('reset')
-                                        display = 'Time Is Up'
-
-                                else:
-                                        tt = datetime.timedelta(seconds=self.timer_counter_num)
-                                        display = tt
-                                        self.timer_counter_num -= 1
-
-                                label.display(display)
-                                self.timer = QtCore.QTimer()
-                                self.timer.timeout.connect(count)
-                                self.timer.setInterval(1000)  # 1000ms = 1s
-                                self.timer.start()
-
-                count()
-
-        def timer(self, work):
+        def timer(work):
 
                 #### Define what to do if the start button is pressed:
 
@@ -445,23 +425,49 @@ class Room(QtWidgets.QFrame):
 
                         if self.timer_counter_num == 0:
 
-                                timer_time_str = '00:15:20'
+                                timer_time_str = self.textenter.text()
                                 hours, minutes, seconds = timer_time_str.split(':')
                                 minutes = int(minutes) + (int(hours) * 60)
                                 seconds = int(seconds) + (minutes * 60)
                                 self.timer_counter_num = self.timer_counter_num + seconds
+                        #print('hei')
+                        timer_counter()
 
-                        self.timer_counter()
+                # elif work == 'stop':
+                #         self.timer_running = False
+                #         self.start.configure(state='normal')
+                #         self.stop.configure(state='disabled')
+                #         self.reset.configure(state='normal')
+                #
+                # elif work == 'reset':
+                #         self.timer_running = False
+                #         self.timer_counter_num = 0
 
-                elif work == 'stop':
-                        self.timer_running = False
-                        self.start.configure(state='normal')
-                        self.stop.configure(state='disabled')
-                        self.reset.configure(state='normal')
+        def timer_counter():
+                def count():
 
-                elif work == 'reset':
-                        self.timer_running = False
-                        self.timer_counter_num = 84000
+                        if self.timer_running:
+
+                                if self.timer_counter_num == 0:
+
+                                        self.timer_running = False
+                                        self.timer('reset')
+                                        display = '00:00:00'
+
+                                else:
+                                        tt = datetime.timedelta(seconds=self.timer_counter_num)
+                                        display = tt
+                                        self.timer_counter_num -= 1
+
+
+                        self.lcdtime.setText(_translate("MainWindow", f'{display}'))
+                        self.timer = QtCore.QTimer()
+                        self.timer.timeout.connect(count)
+                        self.timer.setInterval(1000)  # 1000ms = 1s
+                        self.timer.start()
+
+
+                count()
 
 
 if __name__ == "__main__":

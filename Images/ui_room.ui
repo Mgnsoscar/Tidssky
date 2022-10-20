@@ -13,6 +13,9 @@
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
+  <property name="styleSheet">
+   <string notr="true">border:none;</string>
+  </property>
   <widget class="QWidget" name="centrawidget">
    <property name="styleSheet">
     <string notr="true">background:none;
@@ -23,8 +26,8 @@
      <rect>
       <x>0</x>
       <y>0</y>
-      <width>259</width>
-      <height>316</height>
+      <width>260</width>
+      <height>270</height>
      </rect>
     </property>
     <property name="minimumSize">
@@ -510,7 +513,7 @@ border-bottom-right-radius:15px;</string>
         <property name="bottomMargin">
          <number>5</number>
         </property>
-        <item alignment="Qt::AlignHCenter">
+        <item alignment="Qt::AlignVCenter">
          <widget class="QFrame" name="timerframe">
           <property name="minimumSize">
            <size>
@@ -536,22 +539,37 @@ border-color: qlineargradient(spread:reflect, x1:0.5, y1:0, x2:1, y2:0, stop:0 r
           <property name="frameShadow">
            <enum>QFrame::Raised</enum>
           </property>
-          <layout class="QVBoxLayout" name="verticalLayout_49">
-           <item>
-            <widget class="QLCDNumber" name="lcdtime">
+          <layout class="QHBoxLayout" name="horizontalLayout">
+           <property name="spacing">
+            <number>0</number>
+           </property>
+           <property name="leftMargin">
+            <number>0</number>
+           </property>
+           <property name="topMargin">
+            <number>0</number>
+           </property>
+           <property name="rightMargin">
+            <number>0</number>
+           </property>
+           <property name="bottomMargin">
+            <number>0</number>
+           </property>
+           <item alignment="Qt::AlignHCenter|Qt::AlignVCenter">
+            <widget class="QLabel" name="label">
+             <property name="font">
+              <font>
+               <family>Roboto Cn</family>
+               <pointsize>35</pointsize>
+               <kerning>false</kerning>
+              </font>
+             </property>
              <property name="styleSheet">
-              <string notr="true">background:none;
-border:none;
-color: rgba(255, 255, 255, 200);</string>
+              <string notr="true">color: rgba(255, 255, 255, 200);
+border:none;</string>
              </property>
-             <property name="frameShape">
-              <enum>QFrame::NoFrame</enum>
-             </property>
-             <property name="digitCount">
-              <number>6</number>
-             </property>
-             <property name="segmentStyle">
-              <enum>QLCDNumber::Filled</enum>
+             <property name="text">
+              <string>00:45:00</string>
              </property>
             </widget>
            </item>
